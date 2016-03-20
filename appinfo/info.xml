@@ -5,10 +5,11 @@
     <description>Sends you a email notification when a user logs in from a unknown IP.</description>
     <licence>AGPL</licence>
     <author>David Prandzioch</author>
-    <version>0.9.0</version>
+    <version>1.0.0</version>
     <namespace>LoginNotification</namespace>
     <category>other</category>
     <dependencies>
-        <owncloud min-version="8.1" />
+        <owncloud min-version="9.0" />
+        <owncloud max-version="10.0" />
     </dependencies>
 </info>

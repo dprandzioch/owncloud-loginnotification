@@ -115,8 +115,8 @@ class UserHooks
         $message->setFrom([ $fromEmailAddress => "ownCloud Login Notifier"]);
         $message->setTo([ $user->getEMailAddress() => $user->getDisplayName()]);
 
-        $message->setPlainBody('Someone tried to log in to your ownCloud instance.'
-                . '\n\nUsername: ' . $user->getUID() . '\nUser Agent: '
+        $message->setPlainBody("Someone tried to log in to your ownCloud instance."
+                . "\n\nUsername: " . $user->getUID() . "\nUser Agent: "
                 . $this->request->server['HTTP_USER_AGENT']);
 
         $mailer->send($message);

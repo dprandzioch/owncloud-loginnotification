@@ -62,7 +62,7 @@ class ItemMapper extends Mapper
     public function itemExists($uid, $remoteAddress)
     {
         $sql = 'SELECT COUNT(*) AS `count` FROM `*PREFIX*loginnotification_items` ' .
-                'WHERE `uid` = ? AND `remote_addr` = ? AND `created_at` < ?';
+                'WHERE `uid` = ? AND `remote_addr` = ? AND `created_at` >= ?';
 
         $stmt = $this->execute($sql, [$uid, $remoteAddress, $this->getLastValidDate()]);
 
