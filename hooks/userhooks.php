@@ -55,7 +55,11 @@ class UserHooks
 
         if (false === $this->itemMapper->itemExists($uid, $remoteAddress)) {
             $this->writeDatabaseItem($uid, $remoteAddress);
-            $this->sendNotificationMail($user);
+            try {
+                $this->sendNotificationMail($user);
+            } catch (\Exception $e) {
+                // @todo something went wrong, log
+            }
         }
     }
 
@@ -81,9 +85,15 @@ class UserHooks
      */
     protected function getSenderMailAddress()
     {
-        return $this->config->getSystemValue("mail_from_address")
+        $email = $this->config->getSystemValue("mail_from_address")
                 . "@"
                 . $this->config->getSystemValue("mail_domain");
+        
+        if (false === filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $email = "test@example.com";
+        }
+        
+        return $email;
     }
 
     /**
