@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<info>
+    <id>loginnotification</id>
+    <name>Login Notification</name>
+    <description>My first ownCloud app</description>
+    <licence>AGPL</licence>
+    <author>David Prandzioch</author>
+    <version>0.0.1</version>
+    <namespace>LoginNotification</namespace>
+    <category>other</category>
+    <dependencies>
+        <owncloud min-version="8.1" />
+    </dependencies>
+</info>
