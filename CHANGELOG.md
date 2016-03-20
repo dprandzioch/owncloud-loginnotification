@@ -1,2 +1,2 @@
-owncloud-loginnotification (0.0.1)
+owncloud-loginnotification (0.9.0)
 * First release

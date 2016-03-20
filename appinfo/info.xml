@@ -2,10 +2,10 @@
 <info>
     <id>loginnotification</id>
     <name>Login Notification</name>
-    <description>My first ownCloud app</description>
+    <description>Sends you a email notification when a user logs in from a unknown IP.</description>
     <licence>AGPL</licence>
     <author>David Prandzioch</author>
-    <version>0.0.1</version>
+    <version>0.9.0</version>
     <namespace>LoginNotification</namespace>
     <category>other</category>
     <dependencies>
